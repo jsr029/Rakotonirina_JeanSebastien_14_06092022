@@ -16,12 +16,11 @@ function TableEmployees() {
             let result = false
             result = employee.firstname.toLowerCase().includes(searchValue.toLowerCase()) || 
             employee.lastname.toLowerCase().includes(searchValue.toLowerCase()) ||
-            employee.startdate.toLowerCase().includes(searchValue.toLowerCase()) ||
-            employee.Departement.toLowerCase().includes(searchValue.toLowerCase()) ||
-            employee.dateofbirth.toLowerCase().includes(searchValue.toLowerCase()) ||
             employee.street.toLowerCase().includes(searchValue.toLowerCase()) ||
             employee.city.toLowerCase().includes(searchValue.toLowerCase()) ||
-            employee.State.toLowerCase().includes(searchValue.toLowerCase()) ||
+            employee.Departement.value.toLowerCase().includes(searchValue.toLowerCase()) ||
+            employee.State.value.toLowerCase().includes(searchValue.toLowerCase()) ||
+            employee.dateofbirth.includes(searchValue) ||
             employee.zipcode.toLowerCase().includes(searchValue.toLowerCase())
             return result
         })
