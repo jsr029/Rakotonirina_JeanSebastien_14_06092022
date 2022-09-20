@@ -1,0 +1,11 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.employees{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    align-items: center;
+}
