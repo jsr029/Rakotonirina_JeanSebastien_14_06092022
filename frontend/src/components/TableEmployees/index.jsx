@@ -82,6 +82,7 @@ function TableEmployees() {
     ]
     const [employees, setEmployees] = useState(employeesStore)
     const [searchValue, setSearchValue] = useState('')
+
     useEffect(() => {
         const filteredEmployees = filterEmployees(searchValue)
         setEmployees(filteredEmployees)

@@ -3,8 +3,7 @@ import './styles/main.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Switch
+  Route
 } from "react-router-dom";
 //import Home from './pages/Home';
 //import ViewCurrentEmployees from './pages/ViewCurrentEmployees';

@@ -11,9 +11,7 @@ import Select from "react-select";
 import states from '../data/state'
 import { useDispatch } from 'react-redux'
 import { employees } from '../actions/index'
-import Modal from "react-modal"
-import ModalEmployeeSaved from '../components/ModalEmployeeSaved';
-//import Modal from 'r-js-modal'
+import Modal from 'r-js-modal2'
 
 registerLocale("fr", fr); // register it with the name you want
 
@@ -36,18 +34,8 @@ function Home() {
     const employeesStringify = JSON.stringify(data)
     const employeesParse = JSON.parse(employeesStringify)
     dispatch(employees(employeesParse))
-    setModalIsOpenToTrue()
   }
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const setModalIsOpenToTrue = () => {
-    setModalIsOpen(true)
-  }
-
-  const setModalIsOpenToFalse = () => {
-    setModalIsOpen(false)
-    reset()
-  }
   const [startDate, setStartDate] = useState(new Date());
   const years = range(1990, getYear(new Date()) + 1, 1);
   const months = [
@@ -64,6 +52,9 @@ function Home() {
     "November",
     "December",
   ];
+  const [showModal, setShowModal] = useState(false)
+
+  const hideModal = () => showModal && setShowModal(false)
 
   return (
     <>
@@ -218,23 +209,11 @@ function Home() {
             )}
           />
           <div className='button'>
-            <button type='submit'>Save</button>
+            <button type='submit' onClick={() => setShowModal(true)}>Save</button>
           </div>
-          <Modal
-            isOpen={modalIsOpen}
-            id="confirmation"
-            className="modal"
-            ariaHideApp={false}
-            style={{
-              overlay: {
-                position: 'fixed',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-              }
-            }}
-          >
-            <button className='modalButton' onClick={setModalIsOpenToFalse} >X</button>
-            <ModalEmployeeSaved />
-          </Modal>
+          <Modal show={showModal} onClickCloseBtn={hideModal}>
+        <h1>Employee saved !</h1>
+      </Modal>
         </form>
       </div>
     </>
