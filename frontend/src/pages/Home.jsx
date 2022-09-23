@@ -88,13 +88,6 @@ function Home() {
             control={control}
             name='dateofbirth'
             render={({ field }) => (
-              /* <DatePicker
-                 placeHolderText="Date of Birth"
-                 locale="fr"
-                 dateFormat="dd/MM/yyyy"
-                 onChange={(date) => field.onChange(date)}
-                 selected={field.value}
-               />*/
               <DatePicker
                 renderCustomHeader={({
                   date,
