@@ -4,7 +4,6 @@
 
 # OpenClassRooms last Project
 
-
 # Installation
 
 ## Frontend folder contains the react app
