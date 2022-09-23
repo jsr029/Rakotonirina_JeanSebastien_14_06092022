@@ -18,6 +18,8 @@ registerLocale("fr", fr); // register it with the name you want
 function Home() {
   const { control, formState: { errors }, register, handleSubmit, reset } = useForm();
   const dispatch = useDispatch()
+  const [showModal, setShowModal] = useState(false)
+  const hideModal = () => showModal && setShowModal(false)
   const options = [
     { value: 'Sales', label: 'Sales' },
     { value: 'Marketing', label: 'Marketing' },
@@ -34,6 +36,8 @@ function Home() {
     const employeesStringify = JSON.stringify(data)
     const employeesParse = JSON.parse(employeesStringify)
     dispatch(employees(employeesParse))
+    setShowModal(true)
+    reset()
   }
 
   const [startDate, setStartDate] = useState(new Date());
@@ -52,9 +56,6 @@ function Home() {
     "November",
     "December",
   ];
-  const [showModal, setShowModal] = useState(false)
-
-  const hideModal = () => showModal && setShowModal(false)
 
   return (
     <>
@@ -209,7 +210,7 @@ function Home() {
             )}
           />
           <div className='button'>
-            <button type='submit' onClick={() => setShowModal(true)}>Save</button>
+            <button type='submit'>Save</button>
           </div>
           <Modal show={showModal} onClickCloseBtn={hideModal}>
         <h1>Employee saved !</h1>
