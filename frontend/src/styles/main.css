@@ -64,6 +64,14 @@ img {
   min-height: 100vh;
 }
 
+.react-datepicker__month-container {
+  max-width: 315px;
+}
+.react-datepicker__month-container select {
+  height: 20px;
+  margin: 10px 0;
+}
+
 .title {
   display: flex;
   align-items: center;
