@@ -2,7 +2,7 @@
 
 # P14 : Pass a jQuery library to React
 
-# OpenClassRomms last Project
+# OpenClassRooms last Project
 
 
 # Installation
@@ -10,8 +10,9 @@
 ## Frontend folder contains the react app
 
 1. Type "yarn install" to install HRnet application
-
-2. Open it by "npm start" in vscode terminal or in cmd administrator console
+2. If an error about styled-components appears, type "yarn add styled-components"
+3. Idem with @emotion/unitless, type "yarn add @emotion/unitless"
+4. Open it by "npm start" in vscode terminal or in cmd administrator console
 
 3. Use lighthouse browser devtools to audit it
 
