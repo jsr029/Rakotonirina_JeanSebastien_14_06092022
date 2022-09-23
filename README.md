@@ -1,3 +1,23 @@
+## Jean-Sébastien Rakotonirina, ReactJs dev app trainee
+
 # P14 : Pass a jQuery library to React
 
-## Jean-Sébastien Rakotonirina, ReactJs dev app trainee
+# OpenClassRomms last Project
+
+
+# Installation
+
+## Frontend folder contains the react app
+
+1. Type "yarn install" to install HRnet application
+
+2. Open it by "npm start" in vscode terminal or in cmd administrator console
+
+3. Use lighthouse browser devtools to audit it
+
+## jQuery folder contains the same app written in jQuery
+
+1. Launch it using Go live vscode button
+2. Use the lighthouse browser devtools to audit it
+
+## Compare the audit results
